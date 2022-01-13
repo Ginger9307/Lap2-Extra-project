@@ -1,0 +1,22 @@
+GET http://localhost:3000/movies
+Content-Type: application/json
+
+{}
+
+###
+GET http://localhost:3000/movies/id
+Content-Type: application/json
+
+{}
+
+###
+POST  http://localhost:3000/movies
+Content-Type: application/json
+
+{}
+
+###
+DELETE  http://localhost:3000/movies/id
+Content-Type: application/json
+
+{}

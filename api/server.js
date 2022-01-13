@@ -5,10 +5,13 @@ const server = express();
 server.use(cors());
 server.use(express.json());
 
+// import route
+const movieRoute = require('./controllers/movies');
 
-const port = process.env.PORT || 3000;
+// route middleware
+server.use('/movies', movieRoute);
 
-// Root route
-server.get('/', (req, res) => res.send('Hello, world!'))
+// root route
+server.get('/', (req, res) => res.send('I am all ears'))
 
 module.exports = server
