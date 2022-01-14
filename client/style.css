@@ -1,0 +1,68 @@
+body {
+
+    font-family: 'Roboto', sans-serif;
+
+};
+.column {
+    background-color: #FAF7F2;
+}
+.navbar {
+    background-color:  #9C948A;
+    padding-left: 100px;
+}
+
+.hide-section {
+    display: none;
+}
+
+/* add movie */
+#newMovie {
+    /* position: fixed; */
+    /* overflow-x: scroll; */
+    margin-top: 14%;
+    /* text-align: center;  */
+}
+
+.newMovie {
+    margin: 20px;
+}
+
+.form-control{
+    font-size: small;
+    padding: 0;
+}
+
+.btnAddMovie {
+    background-color: #9C948A;
+    border: none;
+    margin-top: 15px;
+}
+
+
+/* movie card */
+
+#mdb {
+    overflow: auto;
+}
+
+.card {
+    /* margin: 45px auto 0 auto !important; */
+    margin-top: 45px !important;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .1); 
+  }
+
+.about {
+    font-style: italic;
+}
+
+ .bin {
+     color: #9C948A;
+     text-align: right;
+     margin: 0;
+ }
+ .bin:hover {
+     cursor: pointer;
+     color: black;
+ }
