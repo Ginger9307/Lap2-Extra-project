@@ -55,6 +55,9 @@ function appendMovie(movie, movieGrid) {
     newMovieTitle.innerHTML = movie.title;
     newCardBody.append(newMovieTitle);
 
+    // show rating in stars
+    starRating(movie.IMDBrank, newCardBody);
+
     const newYearProd = document.createElement('h6');
     newYearProd.classList.add('card-subtitle');
     newYearProd.classList.add('text-muted');
@@ -62,11 +65,11 @@ function appendMovie(movie, movieGrid) {
     newYearProd.innerHTML = movie.yearOfProd;
     newCardBody.append(newYearProd);
 
-    const newImdbRating = document.createElement('p');
-    newImdbRating.classList.add('card-text');
-    newImdbRating.setAttribute('data-id', movie.id);
-    newImdbRating.innerHTML = movie.IMDBrank;
-    newCardBody.append(newImdbRating);
+    // const newImdbRating = document.createElement('p');
+    // newImdbRating.classList.add('card-text');
+    // newImdbRating.setAttribute('data-id', movie.id);
+    // newImdbRating.innerHTML = movie.IMDBrank;
+    // newCardBody.append(newImdbRating);
 
     const newSinopsys = document.createElement('p');
     newSinopsys.classList.add('card-text');
@@ -88,6 +91,29 @@ function appendMovie(movie, movieGrid) {
     newPBin.append(newBin);
 
 }
+
+// helping function - star rating
+function starRating (rating, newCardBody) {
+    const newStarRating = document.createElement('p');
+    newStarRating.classList.add('star-rating');
+
+    for(let n=1; n<=rating; n++) {
+        const newFullStar = document.createElement('i');
+        newFullStar.classList.add('fas');
+        newFullStar.classList.add('fa-star');
+        newStarRating.append(newFullStar);
+    };
+
+    for(let n=1; n<=(10-rating); n++) {
+        const newStar = document.createElement('i');
+        newStar.classList.add('far');
+        newStar.classList.add('fa-star');
+        newStarRating.append(newStar);
+    };
+
+    newCardBody.append(newStarRating);
+};
+
 
 // create new movie function
 function postMovie(e) {
