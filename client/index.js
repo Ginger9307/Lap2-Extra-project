@@ -79,7 +79,7 @@ function appendMovie(movie, movieGrid) {
     newCardBody.append(newSinopsys);
 
     const newPBin = document.createElement('p');
-    newPBin.classList.add('bin');
+    newPBin.classList.add('pbin');
     newPBin.setAttribute('data-id', movie.id);
     newCardBody.append(newPBin);
 

@@ -1,14 +1,18 @@
 body {
 
     font-family: 'Roboto', sans-serif;
+    background-color: #FAF7F2 !important
+    
 
 };
-.column {
-    background-color: #FAF7F2;
+.content {
+    /* background-color: #FAF7F2; */
 }
 .navbar {
-    background-color:  #9C948A;
+    /* background-color:  #9C948A; */
+    background-color: black;
     padding-left: 100px;
+    font-size: 1rem;
 }
 
 .hide-section {
@@ -32,6 +36,9 @@ body {
     padding: 0;
 }
 
+.fa-heart{
+    color: orangered;
+}
 #inputRating {
     width: 100px;
 }
@@ -45,7 +52,8 @@ label {
 }
 
 .btnAddMovie {
-    background-color: #9C948A;
+    /* background-color: #9C948A; */
+    /* background-color: silver; */
     border: none;
     margin-top: 30px;
 }
@@ -71,14 +79,28 @@ label {
 
 .about {
     font-style: italic;
+    padding-top: 10px;
 }
 
- .bin {
-     color: #9C948A;
+ .pbin {
      text-align: right;
-     margin: 0;
+     margin-bottom: 0 !important;
+
  }
  .bin:hover {
      cursor: pointer;
      color: black;
+ }
+
+/* footer */
+ .footer {
+     margin-top: 20px;
+     background-color: black;
+     text-align: center;
+     padding-top: 20px;
+     padding-bottom: 20px;
+     color: white;
+ }
+ .fas .fa-heart{
+     color: orangered;
  }
