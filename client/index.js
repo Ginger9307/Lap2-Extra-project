@@ -1,9 +1,11 @@
 // start 
 showAll();
 
-// event lisneners
+// ------------- EVENT LISTENERS ---------------
+// add movie button click 
 document.querySelector('.btnAddMovie').addEventListener("click", postMovie);
 
+// delete icon click
 document.addEventListener("click", function (e) {
     console.log(e.target);
   console.log(e.target.className);
@@ -13,7 +15,11 @@ document.addEventListener("click", function (e) {
     }
 });
 
-//---------------- functions------------------
+document.querySelector('#inputMovieAbout').oninput = function(){
+    document.querySelector('output').value = document.querySelector('#inputMovieAbout').value;
+ }
+
+//---------------- FUNCTIONS ------------------
 
 // show all movies
 async function showAll() {
@@ -83,9 +89,10 @@ function appendMovie(movie, movieGrid) {
 
 }
 
-function postMovie() {
-    // e.preventDefault();
-
+// create new movie function
+function postMovie(e) {
+    e.preventDefault();
+  // data from input form  
   const movieData = {
     title : document.querySelector("#inputTitle").value,
     actor  : document.querySelector("#inputActor").value,
@@ -111,7 +118,7 @@ function postMovie() {
   window.location.reload();
 }
 
-// delete Movie
+// delete movie function
 async function deleteMovie(movieID) {
     try {
         const options = { method: 'DELETE' };

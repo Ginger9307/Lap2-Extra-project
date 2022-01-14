@@ -38,25 +38,28 @@
                          <form id="submitNewMovie">
                             <div>
                                 <label for="inputTitle" class="form-label movieTitle">Title*</label>
-                                <input type="text" maxlength="255" class="form-control" id="inputTitle" required placeholder="">
+                                <input type="text" maxlength="255" class="form-control" id="inputTitle" required>
                             </div> 
                             <div>
                                 <label for="inputActor" class="form-label actor">Leading Actor*</label>
-                                <input type="text" maxlength="255" class="form-control" id="inputActor" required placeholder="">
+                                <input type="text" maxlength="255" class="form-control" id="inputActor" required>
                             </div> 
-                            <div>
-                                <label for="inputYear" class="form-label year">Year of Production*</label>
-                                <input type="number" maxlength="4" class="form-control" id="inputYear" required placeholder="">
-                            
-                                <label for="inputRating" class="form-label year">IMDB Rating</label>
-                                <input type="number" maxlength="2" class="form-control" id="inputRating" placeholder="">
-                            </div> 
+                            <div class="row">
+                                <div class=column>
+                                    <label for="inputYear" class="form-label year">Year of Production*</label>
+                                    <input type="number" maxlength="4"  id="inputYear" required>
+                                </div>
+                                <div class=column>
+                                    <label for="inputRating" class="form-label year">Rating</label>
+                                    <input type="range" value="5" min="1" max="10" id="inputRating" oninput="this.nextElementSibling.value = this.value"> <output>5</output>
+                                </div>
+                                </div> 
                             <div>
                                 <label for="inputMovieAbout" class="form-label comLabel">Synopsys*</label>
-                                <textarea class="form-control" maxlength="300" id="inputMovieAbout" rows="2" ></textarea>
+                                <textarea class="form-control" maxlength="300" id="inputMovieAbout" rows="2"></textarea>
                             </div>
 
-                            <button class="btn btn-dark btnAddMovie" type="submit">submit</button>
+                            <button class="btn btn-dark btnAddMovie" type="submit">add Movie</button>
        
                         </form>
                         </div>
