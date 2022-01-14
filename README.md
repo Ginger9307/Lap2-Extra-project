@@ -1,4 +1,5 @@
-# LAP 2 EXTRA PROJECT
+# MovieDB 
+LAP 2 EXTRA PROJECT
 
 Welcome to the movie DB  - database where you can store the list of movies that you wached and their rating.
 
